@@ -1,85 +1,71 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+import Header from  './components/Header.vue';
+import { ref, setTransitionHooks } from 'vue';
+
+const email = ref('');
+const error = ref(null);
+
+const onLogin = (e) => {
+  e.preventDefault();
+  error.value = null;
+  if (email.value.length < 3) {
+    return error.value = 'Email er ikke lang nok';
+    
+  }
+}
+
+
+const validation = (e) => {
+  const input = document.getElementById('em');
+  const eLength = email.value.length;
+
+  if (eLength < 1) {
+    console.log("white")
+    input.style.background = 'white';
+  }
+
+  else if (eLength < 3) {
+    console.log("yellow");
+    input.style.background = 'yellow';
+  }
+  
+  else if (eLength > 100) {
+    console.log("Red")
+    input.style.background = 'red';
+  } 
+
+ 
+
+  else if (eLength < 100 && email.value.length > 3) {
+    console.log("grey")
+    input.style.background = 'grey';
+  }
+}
+
+
+
 </script>
 
 <template>
   <header>
- 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <Header/>  
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/test">Test</RouterLink>
-      </nav>
+      <form v-on:submit="onLogin">
+        <p v-if="error !== null">{{ error }}</p>
+        <input id="em" type="email" v-model="email" v-on:input="validation()">  
+        <p> {{ email.length }}</p>
+        <button>Submit</button>
+      </form>
+      
     </div>
+  
   </header>
 
-  <RouterView />
+  <section>
+    <RouterView />
+  </section>
+
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>

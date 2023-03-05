@@ -23,19 +23,115 @@ body {
   background: $colorCharcoal
 }
 
-#menu {
-  position: fixed;
-  right: 0;
-  height: 100vh;
-  width: 200px;
-  background: rgb(255,102,0);
-  background: linear-gradient(90deg, rgba(255,102,0,1) 0%, rgba(213,141,94,1) 100%);
-  transform: translateX(200px);
-	transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
-  &.active {
-    transform: translateX(0px);
+$color_1: #fff;
+$font-family_1: 'Roboto Condensed';
+
+.svg-wrapper {
+	animation: scaleText;
+	animation-duration: 2s;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+	width: 320px;
+	transform: scale(1);
+}
+
+@keyframes scaleText {
+	0% {
+transform: scale(0.0);
+	}
+   
+	40% {
+		transform: scale(1);
+	}
+  
+	100% {
+		transform: scale(1);
+	}
+  }
+
+
+
+@keyframes logoEntrance {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+
+  10% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+
+
+
+  40% {
+    stroke-width: 2px;
+	stroke-dashoffset: 0;
+	stroke-dasharray: 760;
+  }
+
+  100% {
+    stroke-width: 2px;
+	stroke-dashoffset: 0;
+	stroke-dasharray: 760;
   }
 }
+
+.shape {
+  animation: logoEntrance;
+  animation-duration: 5s;
+	stroke-dasharray: 140 540;
+	stroke-dashoffset: -474;
+	stroke-width: 8px;
+	fill: transparent;
+	stroke: $colorOrange;
+	border-bottom: 5px solid black;
+
+}
+
+.text {
+    margin: 0;
+	font-size: 22px;
+    text-align: CENTER;
+	color: #fff;
+	top: -43px;
+	position: relative;
+}
+
+
+.loading {
+	transform: translateY(-100%);
+	animation: removeLoading;
+	animation-duration: 4s;
+	transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	background: $colorCharcoal;
+}
+
+
+@keyframes removeLoading {
+	0% {
+		transform: translateY(0%);
+		
+	}
+  
+	70% {
+	transform: translateY(0%);
+	}
+
+	100% {
+		transform: translateY(-100%);
+	}
+}
+
+
 
 @media (min-width: 1400px) {
   .container {

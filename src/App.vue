@@ -3,7 +3,9 @@ import { RouterLink, RouterView } from "vue-router";
 import Menu from  './components/Menu.vue';
 import Logo from  './components/Logo.vue';
 import Hamburger from  './components/Hamburger.vue';
+
 import Triangle from  './components/layout/Triangle.vue';
+
 import { ref, setTransitionHooks, onMounted } from 'vue';
 
 onMounted(() => {
@@ -17,6 +19,7 @@ onMounted(() => {
 
 
 
+
 })
 
 
@@ -24,9 +27,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="menu">
-    <Menu/>
-  </div>
+
+
+
+
 
 
   <header>
@@ -43,17 +47,38 @@ onMounted(() => {
 <section>
   <div class="container">
     <div class="row">
-      <div class="col-6">ey</div>
-      <div class="col-6">eys</div>
+      <div class="col-6">
+      
+      </div>
+      <div class="col-6">
+        
+      </div>
 
     </div>
   </div>
 
 </section>
 
+
+<section class="loading">
+<div class="svg-wrapper">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+    <h2 class="text">mads welling</h2>
+  </svg>
+</div>
+</section>
+
+
   <section>
     <RouterView />
   </section>
+
+
+
+    <Menu/>
+
+
 
 </template>
 

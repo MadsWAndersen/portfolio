@@ -23,8 +23,11 @@ body {
   background: $colorCharcoal
 }
 
-$color_1: #fff;
-$font-family_1: 'Roboto Condensed';
+header {
+	animation: delayedHeader;
+	animation-duration: 2;
+}
+
 
 .svg-wrapper {
 	animation: scaleText;

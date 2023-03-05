@@ -30,7 +30,6 @@
 	user-select: none;
 	
 }
-
 .hamRotate.active {
 	transform: rotate(45deg);
 }
@@ -40,7 +39,7 @@
 	transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
 	stroke: orange;
 	transition: .5s ease;
-	stroke-width: 3.5;
+	stroke-width: 5.5;
 }
 .ham1 {
 	.top {

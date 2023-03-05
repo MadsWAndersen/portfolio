@@ -23,11 +23,11 @@ import { ref, onMounted } from 'vue'
   right: 0;
   top: 0;
   height: 100vh;
-  width: 200px;
+  width: 100vw;
   background: rgb(255,102,0);
   background: linear-gradient(90deg, rgba(255,102,0,1) 0%, rgba(213,141,94,1) 100%);
-  transform: translateX(200px);
-	transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+  transform: translateX(100vw);
+    transition: all 2000ms cubic-bezier(1, -0.55, 0.765, 1);
   &.active {
     transform: translateX(0px);
   }

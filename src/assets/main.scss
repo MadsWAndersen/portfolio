@@ -104,6 +104,7 @@ transform: scale(0.0);
 
 
 .loading {
+	z-index: 2;
 	transform: translateY(-100%);
 	animation: removeLoading;
 	animation-duration: 4s;

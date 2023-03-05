@@ -20,6 +20,7 @@
 
 
 .ham {
+	z-index: 1;
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
 	transition: transform 400ms;
@@ -27,17 +28,18 @@
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	
 }
+
 .hamRotate.active {
 	transform: rotate(45deg);
 }
-.hamRotate180.active {
-	transform: rotate(180deg);
-}
+
 .line {
 	fill: none;
 	transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
 	stroke: orange;
+	transition: .5s ease;
 	stroke-width: 3.5;
 }
 .ham1 {
@@ -49,6 +51,11 @@
 	}
 }
 .ham1.active {
+	.line {
+		stroke: #fff;
+		transition: .5s ease;
+
+	}
 	.top {
 		stroke-dashoffset: -98px;
 	}

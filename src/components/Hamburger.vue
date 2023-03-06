@@ -1,15 +1,9 @@
 <template>
-        <svg id="hamburger" class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
-          <path
-                class="line top"
-                d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -18.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
-          <path
-                class="line middle"
-                d="m 30,50 h 40" />
-          <path
-                class="line bottom"
-                d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
-        </svg>
+	<div id="menu-icon">
+		<span class="menu-icon__line menu-icon__line-left"></span>
+		<span class="menu-icon__line menu-icon__line-center"></span>
+		<span class="menu-icon__line menu-icon__line-right"></span>
+	</div>
 </template>
 
 <script setup>
@@ -18,48 +12,72 @@
 
 <style lang="scss" scoped>
 
-
-.ham {
-	z-index: 1;
+#menu-icon {
+	z-index: 2;
+	width: 23px;
+    display: flex;
+    flex-direction: column;
+	height: 20px;
+    gap: 7px;
+	position: relative;
 	cursor: pointer;
-	-webkit-tap-highlight-color: transparent;
-	transition: transform 400ms;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	
-}
-.hamRotate.active {
-	transform: rotate(45deg);
+	&.active {
+		.menu-icon__line {
+			opacity: 0;
+			&-left {
+				opacity: 1;
+				display: block;
+				width: 100%;
+				transition: 0.2s ease;
+				top: 50%;
+				transform: rotate(-45deg);
+			}
+
+			&-center {
+				width: 0%;
+				transition: 0.5s ease
+			}
+
+			&-right {
+				opacity: 1;
+				display: block;
+				width: 100%;
+				transition: 0.2s ease;
+				top: 50%;
+				transform: translateX(0%) rotate(45deg);
+				
+			}
+		}
+	}
+	.menu-icon__line {
+		background-color: white;
+		width: 100%;
+		height: 3px;
+		&-center {
+			position: absolute;
+			transform: translateY(-50%);
+			top: 50%;
+			transition: 0.5s ease
+		}
+		&-left {
+			position: absolute;
+			bottom: 0;
+			width: 50%;
+			transition: 0.2s ease;
+		}
+		&-right {
+			top: 0;
+			position: absolute;
+			width: 50%;
+			transform: translateX(100%);
+			transition: 0.2s ease;
+		}
+
+
+		
+	}
+
 }
 
-.line {
-	fill: none;
-	transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-	stroke: orange;
-	transition: .5s ease;
-	stroke-width: 5.5;
-}
-.ham1 {
-	.top {
-		stroke-dasharray: 40 139;
-	}
-	.bottom {
-		stroke-dasharray: 40 180;
-	}
-}
-.ham1.active {
-	.line {
-		stroke: #fff;
-		transition: .5s ease;
 
-	}
-	.top {
-		stroke-dashoffset: -98px;
-	}
-	.bottom {
-		stroke-dashoffset: -138px;
-	}
-}
 </style>

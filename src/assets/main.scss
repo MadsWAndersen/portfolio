@@ -20,25 +20,67 @@ $colorCharcoal: #1D1D20;
 }
 
 body {
-  background: $colorCharcoal
+  background: $colorCharcoal;
+  animation: stopOverflow;
+  animation-duration: 4.5s;
 }
+
+@keyframes stopOverflow {
+	0% {
+		overflow-x: hidden;
+	}
+	
+	100% {
+		overflow-x: hidden;
+	}
+}
+
+
+
 
 header {
 	animation: delayedHeader;
 	animation-duration: 2;
+	width: 100%;
+	transition: 2s ease;
+	position: fixed;
+	top: 0;
+	&.header-scroll {
+		position: fixed;
+		transition: 1s ease;
+		top: 0;
+		background: rgb(255,102,0);
+		background: linear-gradient(90deg, rgba(255,102,0,1) 0%, rgba(213,141,94,1) 100%);
+		z-index: 1;
+		.row {
+			padding-top: 10px;
+    		padding-bottom: 10px;
+			transition: 0.5s ease;
+			#menu-icon {
+				margin-top: 10px;
+			}
+		}
+		.triangle {
+			transition: 0.2s ease;;
+	
+			top: -350px;
+		}
+	}
+
+	.row {
+		padding-top: 50px;
+		transition: 0.2s ease;
+	}
+	.triangle {
+	  position: absolute;
+	  pointer-events: none;
+	  transition: 0.2s ease;
+	  top: 0;
+	  
+	 }
 }
 
 
-.svg-wrapper {
-	animation: scaleText;
-	animation-duration: 2s;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-	margin: 0 auto;
-	width: 320px;
-	transform: scale(1);
-}
 
 @keyframes scaleText {
 	0% {
@@ -56,57 +98,57 @@ transform: scale(0.0);
 
 
 
+  .shape {
+	animation: logoEntrance;
+	animation-duration: 5s;
+	animation-delay: 0.5s;
+	stroke-dasharray: 140 540;
+	stroke-dashoffset: -474;
+	stroke-width: 8px;
+	fill: transparent;
+	stroke: #FF6600;
+	border-bottom: 5px solid black;
+}
+
+.text {
+	margin: 0;
+	font-size: 22px;
+	text-align: CENTER;
+	color: #fff;
+	top: -43px;
+	position: relative;
+	z-index: 5;
+}
+
 @keyframes logoEntrance {
   0% {
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474;
-    stroke-width: 8px;
+	stroke-dasharray: 140 540;
+	stroke-dashoffset: -474;
+	stroke-width: 8px;
   }
 
   10% {
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474;
-    stroke-width: 8px;
+	stroke-dasharray: 140 540;
+	stroke-dashoffset: -474;
+	stroke-width: 8px;
   }
 
-
-
   40% {
-    stroke-width: 2px;
+	stroke-width: 6px;
 	stroke-dashoffset: 0;
 	stroke-dasharray: 760;
   }
 
   100% {
-    stroke-width: 2px;
+	stroke-width: 6px;
 	stroke-dashoffset: 0;
 	stroke-dasharray: 760;
   }
 }
 
-.shape {
-  animation: logoEntrance;
-  animation-duration: 5s;
-	stroke-dasharray: 140 540;
-	stroke-dashoffset: -474;
-	stroke-width: 8px;
-	fill: transparent;
-	stroke: $colorOrange;
-	border-bottom: 5px solid black;
-
-}
-
-.text {
-    margin: 0;
-	font-size: 22px;
-    text-align: CENTER;
-	color: #fff;
-	top: -43px;
-	position: relative;
-}
-
 
 .loading {
+
 	z-index: 2;
 	transform: translateY(-100%);
 	animation: removeLoading;
@@ -114,9 +156,27 @@ transform: scale(0.0);
 	transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
 	width: 100vw;
 	height: 100vh;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	background: $colorCharcoal;
+	&.delayed {
+		animation: removeLoadingDelayed;
+		animation-delay: 1s;
+		animation-duration: 4s;
+		transform: translateY(0%);
+		opacity: 0;
+		pointer-events: none;
+	}
+	.svg-wrapper {
+		animation: scaleText;
+		animation-duration: 2s;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		margin: 0 auto;
+		width: 320px;
+		transform: scale(1);
+	}
 }
 
 
@@ -126,15 +186,54 @@ transform: scale(0.0);
 		
 	}
   
-	70% {
+	80% {
 	transform: translateY(0%);
+	transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
 	}
 
 	100% {
 		transform: translateY(-100%);
+		transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
 	}
 }
 
+
+@keyframes removeLoadingDelayed {
+	0% {
+		opacity: 1;
+		
+	}
+  
+	70% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+
+
+
+
+.introduction {
+	height: 100vh;
+	display: flex;
+    align-items: center;
+	&__title {
+		&--white {
+			color: #fff;
+		}
+	}
+
+	&__text {
+		&--white {
+			color: #fff;
+		}
+	}
+
+}
 
 
 @media (min-width: 1400px) {
@@ -143,14 +242,6 @@ transform: scale(0.0);
   }
 }
 
-header {
-  width: 100%;
-  .triangle {
-    position: absolute;
-    pointer-events: none;
-   }
-
-}
 
 
 

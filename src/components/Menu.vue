@@ -20,6 +20,7 @@ import { ref, onMounted } from 'vue'
 
 #menu {
   position: fixed;
+  
   right: 0;
   top: 0;
   height: 100vh;

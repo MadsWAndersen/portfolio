@@ -2,41 +2,42 @@
 ////////////////////////////// Variables ///////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 
-$colorOrange: #FF6600;
-$colorCharcoal: #1D1D20;
+$colorOrange: #ff6600;
+$colorCharcoal: #1d1d20;
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////// Fonts ///////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 
-@import url('https://fonts.cdnfonts.com/css/mark-pro');
+@import url("https://fonts.cdnfonts.com/css/mark-pro");
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////// General styling /////////////////////////
 ////////////////////////////////////////////////////////////////////////
 
 * {
-  font-family: 'Mark Pro', sans-serif;
+	font-family: "Mark Pro", sans-serif;
 }
 
 body {
-  background: $colorCharcoal;
-  animation: stopOverflow;
-  animation-duration: 4.5s;
+	background: $colorCharcoal;
+	animation: stopOverflow;
+	animation-duration: 4.5s;
 }
 
 @keyframes stopOverflow {
 	0% {
-		overflow-x: hidden;
+		overflow-y: hidden;
 	}
-	
+
 	100% {
-		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 }
 
-
-
+.container {
+	position: relative;
+}
 
 header {
 	animation: delayedHeader;
@@ -45,24 +46,24 @@ header {
 	transition: 2s ease;
 	position: fixed;
 	top: 0;
+	background: transparent;
+	z-index: 1;
 	&.header-scroll {
 		position: fixed;
 		transition: 1s ease;
 		top: 0;
-		background: rgb(255,102,0);
-		background: linear-gradient(90deg, rgba(255,102,0,1) 0%, rgba(213,141,94,1) 100%);
-		z-index: 1;
+		background: rgb(255, 102, 0);
+		background: linear-gradient(90deg, rgba(255, 102, 0, 1) 0%, rgba(213, 141, 94, 1) 100%);
 		.row {
 			padding-top: 10px;
-    		padding-bottom: 10px;
+			padding-bottom: 10px;
 			transition: 0.5s ease;
 			#menu-icon {
 				margin-top: 10px;
 			}
 		}
 		.triangle {
-			transition: 0.2s ease;;
-	
+			transition: 0.2s ease;
 			top: -350px;
 		}
 	}
@@ -72,33 +73,29 @@ header {
 		transition: 0.2s ease;
 	}
 	.triangle {
-	  position: absolute;
-	  pointer-events: none;
-	  transition: 0.2s ease;
-	  top: 0;
-	  
-	 }
+		position: absolute;
+		pointer-events: none;
+		transition: 0.2s ease;
+		top: 0;
+		left: 0;
+	}
 }
-
-
 
 @keyframes scaleText {
 	0% {
-transform: scale(0.0);
+		transform: scale(0);
 	}
-   
+
 	40% {
 		transform: scale(1);
 	}
-  
+
 	100% {
 		transform: scale(1);
 	}
-  }
+}
 
-
-
-  .shape {
+.shape {
 	animation: logoEntrance;
 	animation-duration: 5s;
 	animation-delay: 0.5s;
@@ -106,7 +103,7 @@ transform: scale(0.0);
 	stroke-dashoffset: -474;
 	stroke-width: 8px;
 	fill: transparent;
-	stroke: #FF6600;
+	stroke: #ff6600;
 	border-bottom: 5px solid black;
 }
 
@@ -121,39 +118,37 @@ transform: scale(0.0);
 }
 
 @keyframes logoEntrance {
-  0% {
-	stroke-dasharray: 140 540;
-	stroke-dashoffset: -474;
-	stroke-width: 8px;
-  }
+	0% {
+		stroke-dasharray: 140 540;
+		stroke-dashoffset: -474;
+		stroke-width: 8px;
+	}
 
-  10% {
-	stroke-dasharray: 140 540;
-	stroke-dashoffset: -474;
-	stroke-width: 8px;
-  }
+	10% {
+		stroke-dasharray: 140 540;
+		stroke-dashoffset: -474;
+		stroke-width: 8px;
+	}
 
-  40% {
-	stroke-width: 6px;
-	stroke-dashoffset: 0;
-	stroke-dasharray: 760;
-  }
+	40% {
+		stroke-width: 6px;
+		stroke-dashoffset: 0;
+		stroke-dasharray: 760;
+	}
 
-  100% {
-	stroke-width: 6px;
-	stroke-dashoffset: 0;
-	stroke-dasharray: 760;
-  }
+	100% {
+		stroke-width: 6px;
+		stroke-dashoffset: 0;
+		stroke-dasharray: 760;
+	}
 }
 
-
 .loading {
-
 	z-index: 2;
 	transform: translateY(-100%);
 	animation: removeLoading;
 	animation-duration: 4s;
-	transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+	transition: all 400ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
@@ -179,31 +174,27 @@ transform: scale(0.0);
 	}
 }
 
-
 @keyframes removeLoading {
 	0% {
 		transform: translateY(0%);
-		
 	}
-  
+
 	80% {
-	transform: translateY(0%);
-	transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+		transform: translateY(0%);
+		transition: all 400ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
 	}
 
 	100% {
 		transform: translateY(-100%);
-		transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+		transition: all 400ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
 	}
 }
-
 
 @keyframes removeLoadingDelayed {
 	0% {
 		opacity: 1;
-		
 	}
-  
+
 	70% {
 		opacity: 1;
 	}
@@ -213,14 +204,10 @@ transform: scale(0.0);
 	}
 }
 
-
-
-
-
 .introduction {
 	height: 100vh;
 	display: flex;
-    align-items: center;
+	align-items: center;
 	&__title {
 		&--white {
 			color: #fff;
@@ -232,16 +219,10 @@ transform: scale(0.0);
 			color: #fff;
 		}
 	}
-
 }
-
 
 @media (min-width: 1400px) {
-  .container {
-      max-width: 1580px!important;
-  }
+	.container {
+		max-width: 1580px !important;
+	}
 }
-
-
-
-

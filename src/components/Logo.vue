@@ -9,10 +9,11 @@
 </script>
 
 <style lang="scss" scoped>
-    span {
-        color: white;
-        font-size: 25px;
-    }
+span {
+    color: white;
+    font-size: 25px;
+
+}
 </style>
 
 

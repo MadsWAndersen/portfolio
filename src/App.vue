@@ -10,8 +10,8 @@ import Hamburger from './components/Hamburger.vue';
 import PortraitPicture from './components/PortraitPicture.vue';
 
 import Triangle from './components/layout/Triangle.vue';
-import Sideline from './components/layout/Sideline.vue';
-import Loading from './components/layout/Loading.vue';
+// import Sideline from './components/layout/Sideline.vue';
+// import Loading from './components/layout/Loading.vue';
 
 
 // Activate Menu //
@@ -19,14 +19,16 @@ import Loading from './components/layout/Loading.vue';
 onMounted(() => {
 
 
+
+
+
+
   // Activate Menu //
   const ham = document.getElementById('menu-icon');
   const menu = document.getElementById('menu')
 
   ham.addEventListener("click", function () {
-    ham.classList.toggle("active");
     menu.classList.toggle("active");
-    console.log("toggle")
   })
 
 
@@ -39,6 +41,7 @@ onMounted(() => {
       header.classList.remove('header-scroll');
     }
   });
+
 
 
 

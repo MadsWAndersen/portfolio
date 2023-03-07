@@ -1,5 +1,5 @@
 <template>
-	<div id="menu-icon">
+	<div id="menu-icon" :class="{ active: isActive }" @click="toggleActive">
 		<span class="menu-icon__line menu-icon__line-left"></span>
 		<span class="menu-icon__line menu-icon__line-center"></span>
 		<span class="menu-icon__line menu-icon__line-right"></span>
@@ -7,6 +7,16 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
+const isActive = ref(false)
+// const menu = document.getElementById('menu')
+
+function toggleActive() {
+	isActive.value = !isActive.value
+	// const menu = document.getElementById('menu')
+}
+
 
 </script>
 

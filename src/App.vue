@@ -1,55 +1,37 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import { ref, setTransitionHooks, onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 
 // Import components //
-
 import Menu from './components/Menu.vue';
 import Logo from './components/Logo.vue';
+import Experience from './components/Experience.vue';
 import Hamburger from './components/Hamburger.vue';
 import PortraitPicture from './components/PortraitPicture.vue';
-
 import Triangle from './components/layout/Triangle.vue';
-// import Sideline from './components/layout/Sideline.vue';
-// import Loading from './components/layout/Loading.vue';
 
+// Define variables //
+const showMenu = ref(false);
+const isScrolled = ref(false);
 
-// Activate Menu //
+// Add event listener to detect scroll //
+window.addEventListener('scroll', () => {
+  isScrolled.value = window.scrollY > 0;
+});
 
+// Handle menu click //
+function handleMenuClick() {
+  showMenu.value = !showMenu.value;
+}
+
+// Call mounted hook //
 onMounted(() => {
-
-
-
-
-
-
-  // Activate Menu //
-  const ham = document.getElementById('menu-icon');
-  const menu = document.getElementById('menu')
-
-  ham.addEventListener("click", function () {
-    menu.classList.toggle("active");
-  })
-
-
-  const header = document.querySelector('header');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
-      header.classList.add('header-scroll');
-    } else {
-      header.classList.remove('header-scroll');
-    }
-  });
-
-
-
-
-})
+  // Add any additional code here if needed //
+});
 </script>
-
 <template>
-  <header>
+  <!-- Header component -->
+  <header :class="{ 'header-scroll': isScrolled }">
     <div class="container">
       <div class="triangle">
         <Triangle />
@@ -59,12 +41,12 @@ onMounted(() => {
           <Logo />
         </div>
         <div class="col-7 d-flex justify-content-end">
-          <Hamburger />
+          <Hamburger @click="handleMenuClick" />
         </div>
       </div>
     </div>
   </header>
-
+  <!-- Home section -->
   <section id="home">
     <div class="container">
       <div class="row introduction">
@@ -78,7 +60,6 @@ onMounted(() => {
             <br><br>
             Tak fordi du besøger min side!
           </p>
-
         </div>
         <div class="col-5 offset-1">
           <PortraitPicture />
@@ -86,39 +67,11 @@ onMounted(() => {
       </div>
     </div>
   </section>
-
-  <section id="home">
-    <div class="container">
-      <div class="row introduction">
-        <div class="col-5 offset-1">
-          <h1 class="introduction__title--white">Velkommen!</h1>
-          <p class="introduction__text--white "> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
-        </div>
-        <div class="col-5 offset-1">
-          <PortraitPicture />
-        </div>
-      </div>
-    </div>
-  </section>
-
-
+  <!-- About section -->
   <section id="about">
-
+    <Experience />
   </section>
-
-
-
-
+  <!-- Loading sections -->
   <section class="loading delayed"></section>
   <section class="loading">
     <div class="svg-wrapper">
@@ -129,11 +82,7 @@ onMounted(() => {
     </div>
   </section>
 
+  <!-- Menu component -->
 
-
-  <section>
-    <RouterView />
-  </section>
-
-  <Menu />
-</template>
+  <Menu :class="{ active: showMenu }" />
+</template> 

@@ -25,6 +25,13 @@ body {
 	animation-duration: 4.5s;
 }
 
+#about {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 @keyframes stopOverflow {
 	0% {
 		overflow-y: hidden;

@@ -1,17 +1,14 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-
-
-
 </script>
 
 <template>
   <div id="menu">
     <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/test">Test</RouterLink>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#test">Test</a>
     </nav>
   </div>
 </template>

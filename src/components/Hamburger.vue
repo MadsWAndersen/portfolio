@@ -10,14 +10,10 @@
 import { ref } from 'vue'
 
 const isActive = ref(false)
-// const menu = document.getElementById('menu')
 
 function toggleActive() {
 	isActive.value = !isActive.value
-	// const menu = document.getElementById('menu')
 }
-
-
 </script>
 
 <style lang="scss" scoped>

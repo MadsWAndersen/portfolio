@@ -84,7 +84,7 @@ onMounted(() => {
         <textarea name="message"></textarea>
       </label>
       <!-- your other form fields go here -->
-      <button type="submit">Ssend</button>
+      <button type="submit">Sessnd</button>
     </form>
   </section>
   <!-- Loading sections -->

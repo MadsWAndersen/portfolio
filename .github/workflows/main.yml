@@ -15,7 +15,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ssh.welling.nu
+        server: ftp.welling.nu
         username: welling.nu
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/

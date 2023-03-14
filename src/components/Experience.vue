@@ -15,16 +15,19 @@
 import { ref, computed } from 'vue';
 
 const tabs = [
+        {
+        title: 'Fingerspitz',
+        content: '<h3>Maj 2021 -</h3>' +
+        '<p>'
+    },
     {
         title: 'OnlinePlus',
-        content: '<p>Internship</p>',
+        content: '<h3>August 2020 - Oktober 2020</h3>' +
+        '<p>During my internship as a Frontend Developer, I had the pleasure of working with a diverse clientele, which granted me ample opportunities to enhance my skills. In particular, I gained extensive experience working with WordPress sites and worked particular a lot with Advanced Custom Fields. This experince helped me honing my proficiency in this popular content management system.</p>'
     },
+
     {
-        title: 'Fingerspitz',
-        content: '<p>Working there since 1.5 years</p>',
-    },
-    {
-        title: 'Freelance',
+        title: 'School Projects',
         content: '<p>Content for tab 3 goes here</p>',
     },
 ];
@@ -71,13 +74,13 @@ const activeTabContent = computed(() => tabs[activeTab.value].content);
             }
 
             &--active {
-                font-weight: bold;
+                font-weight: bolder;
                 transition: 0.5s ease;
+                font-weight: 900;
 
                 &:after {
                     content: "";
                     width: 100%;
-
                     background-color: #fff;
                     display: flex;
                     transition: 0.5s ease;

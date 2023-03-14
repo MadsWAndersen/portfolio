@@ -51,7 +51,7 @@ onMounted(() => {
   <section id="home">
     <div class="container">
       <div class="row introduction">
-        <div class="col-5 offset-1">
+        <div class="col-lg-5 offset-lg-1 col-sm-12">
           <h1 class="introduction__title--white">Velkommen!</h1>
           <p class="introduction__text--white ">Velkommen til min portefølje! Jeg er en ambitiøs webudviklingsstuderende
             med en
@@ -62,7 +62,7 @@ onMounted(() => {
             Tak fordi du besøger min side!
           </p>
         </div>
-        <div class="col-5 offset-1">
+        <div class="col-lg-5 offset-lg-1 col-sm-12">
           <PortraitPicture />
         </div>
       </div>

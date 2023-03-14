@@ -1,9 +1,9 @@
 <template>
 	<div class="img">
 		<div class="img__container">
-			<img class="img-top" src="https://source.unsplash.com/7r1HxvVC7AY/450x800">
-			<img class="img-mid" src="https://source.unsplash.com/TAj4X5-eRqE/450x800">
-			<img class="img-bottom" src="https://source.unsplash.com/bULD0lNVXOA/450x800">
+			<img class="img-top" src="src/assets/img/MadsP.jpg">
+			<img class="img-mid" src="src/assets/img/MadsP.jpg">
+			<img class="img-bottom" src="src/assets/img/MadsP.jpg">
 		</div>
 	</div>
 </template>
@@ -15,7 +15,7 @@
 <style lang="scss" scoped>
 @keyframes flipme {
 	0% {
-		transform: rotateY(-30deg) rotateX(0deg);
+		transform: rotateY(-20deg) rotateX(0deg);
 	}
 
 	50% {
@@ -23,17 +23,18 @@
 	}
 
 	100% {
-		transform: rotateY(-30deg) rotateX(0deg);
+		transform: rotateY(-20deg) rotateX(0deg);
 	}
 }
 
 .img {
 	transform: scale(0.7);
 
+
 	.img__container {
 		position: relative;
 		width: 450px;
-		height: 800px;
+		height: 802px;
 		transform: rotateY(0deg) rotateX(0deg) scale(0.5);
 		transform-style: preserve-3d;
 		animation: 15s flipme linear infinite;
@@ -47,6 +48,7 @@
 
 		>img {
 			position: absolute;
+			height: 100%;
 
 			&:nth-of-type(1) {
 				clip-path: polygon(0 0, 0 200px, 200px 0);

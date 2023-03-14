@@ -16,7 +16,7 @@ const isScrolled = ref(false);
 
 // Add event listener to detect scroll //
 window.addEventListener('scroll', () => {
-  isScrolled.value = window.scrollY > 0;
+  isScrolled.value = window.scrollY > 10;
 });
 
 // Handle menu click //

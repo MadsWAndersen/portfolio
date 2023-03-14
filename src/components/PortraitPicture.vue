@@ -30,7 +30,6 @@
 .img {
 	transform: scale(0.7);
 
-
 	.img__container {
 		position: relative;
 		width: 450px;

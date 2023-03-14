@@ -36,7 +36,7 @@
 		height: 800px;
 		transform: rotateY(0deg) rotateX(0deg) scale(0.5);
 		transform-style: preserve-3d;
-		animation: 30s flipme linear infinite;
+		animation: 15s flipme linear infinite;
 		transition: transform 300ms ease;
 		transform-origin: 50% 50%;
 

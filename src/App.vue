@@ -71,6 +71,22 @@ onMounted(() => {
   <section id="about">
     <Experience />
   </section>
+
+
+  <section id="contact">
+    <form action="https://formspree.io/f/xknazqyo" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="email">
+      </label>
+      <label>
+        Your message:
+        <textarea name="message"></textarea>
+      </label>
+      <!-- your other form fields go here -->
+      <button type="submit">Send</button>
+    </form>
+  </section>
   <!-- Loading sections -->
   <section class="loading delayed"></section>
   <section class="loading">

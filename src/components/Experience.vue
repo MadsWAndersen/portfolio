@@ -16,24 +16,16 @@ import { ref, computed } from 'vue';
 
 const tabs = [
     {
-        title: 'Erfaring',
-        content: '<p>Content for tab 1 goes here</p>',
+        title: 'OnlinePlus',
+        content: '<p>Internship</p>',
     },
     {
-        title: 'Tab 2',
-        content: '<p>Content for tab 2 goes here</p>',
+        title: 'Fingerspitz',
+        content: '<p>Working there since 1.5 years</p>',
     },
     {
-        title: 'Tab 3',
+        title: 'Freelance',
         content: '<p>Content for tab 3 goes here</p>',
-    },
-    {
-        title: 'Tab 4',
-        content: '<p>Content for tab 4 goes here</p>',
-    },
-    {
-        title: 'Tab 5',
-        content: '<p>Content for tab 5 goes here</p>',
     },
 ];
 
@@ -49,9 +41,16 @@ const activeTabContent = computed(() => tabs[activeTab.value].content);
 
 <style lang="scss">
 .tabs {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
     display: flex;
-    max-width: 600px;
+    max-width: 800px;
+    width: 100%;
     margin: auto;
+    padding: 50px;
+    border-radius: 10px;
+	background:linear-gradient(90deg, rgba(255, 102, 0, 1) 0%, rgba(213, 141, 94, 1) 100%);
+
 
     .tabs__tab-container {
         display: flex;

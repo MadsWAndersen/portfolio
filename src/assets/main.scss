@@ -4,6 +4,7 @@
 
 $colorOrange: #ff6600;
 $colorCharcoal: #1d1d20;
+$gradiant: linear-gradient(90deg, rgba(255, 102, 0, 1) 0%, rgba(213, 141, 94, 1) 100%);
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////// Fonts ///////////////////////////////////
@@ -60,7 +61,7 @@ header {
 		transition: 10s ease;
 		top: 0;
 		background: rgb(255, 102, 0);
-		background: linear-gradient(90deg, rgba(255, 102, 0, 1) 0%, rgba(213, 141, 94, 1) 100%);
+		background: $gradiant;
 		.row {
 			padding-top: 10px;
 			padding-bottom: 10px;
@@ -88,19 +89,7 @@ header {
 	}
 }
 
-@keyframes scaleText {
-	0% {
-		transform: scale(0);
-	}
 
-	40% {
-		transform: scale(1);
-	}
-
-	100% {
-		transform: scale(1);
-	}
-}
 
 .shape {
 	animation: logoEntrance;
@@ -124,31 +113,7 @@ header {
 	z-index: 5;
 }
 
-@keyframes logoEntrance {
-	0% {
-		stroke-dasharray: 140 540;
-		stroke-dashoffset: -474;
-		stroke-width: 8px;
-	}
 
-	10% {
-		stroke-dasharray: 140 540;
-		stroke-dashoffset: -474;
-		stroke-width: 8px;
-	}
-
-	40% {
-		stroke-width: 6px;
-		stroke-dashoffset: 0;
-		stroke-dasharray: 760;
-	}
-
-	100% {
-		stroke-width: 6px;
-		stroke-dashoffset: 0;
-		stroke-dasharray: 760;
-	}
-}
 
 .loading {
 	z-index: 2;
@@ -181,6 +146,39 @@ header {
 	}
 }
 
+
+
+.introduction {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	&__title {
+		&--white {
+			color: #fff;
+		}
+	}
+
+	&__text {
+		&--white {
+			color: #fff;
+		}
+	}
+}
+
+.bg {
+	position: absolute;
+	pointer-events: none;
+	opacity: 0.2;
+	z-index: -1;
+}
+
+@media (min-width: 1400px) {
+	.container {
+		max-width: 1580px !important;
+	}
+}
+
+/* 
 @keyframes removeLoading {
 	0% {
 		transform: translateY(0%);
@@ -211,25 +209,42 @@ header {
 	}
 }
 
-.introduction {
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	&__title {
-		&--white {
-			color: #fff;
-		}
+@keyframes logoEntrance {
+	0% {
+		stroke-dasharray: 140 540;
+		stroke-dashoffset: -474;
+		stroke-width: 8px;
 	}
 
-	&__text {
-		&--white {
-			color: #fff;
-		}
+	10% {
+		stroke-dasharray: 140 540;
+		stroke-dashoffset: -474;
+		stroke-width: 8px;
+	}
+
+	40% {
+		stroke-width: 6px;
+		stroke-dashoffset: 0;
+		stroke-dasharray: 760;
+	}
+
+	100% {
+		stroke-width: 6px;
+		stroke-dashoffset: 0;
+		stroke-dasharray: 760;
 	}
 }
 
-@media (min-width: 1400px) {
-	.container {
-		max-width: 1580px !important;
+@keyframes scaleText {
+	0% {
+		transform: scale(0);
 	}
-}
+
+	40% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+} */

@@ -24,6 +24,9 @@ body {
 	background: $colorCharcoal;
 	animation: stopOverflow;
 	animation-duration: 4.5s;
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
 }
 
 #about {
@@ -35,11 +38,12 @@ body {
 	align-items: center;
 }
 
+#app {
+	max-width: unset;
+}
 
 .container {
 	position: relative;
-
-
 }
 
 header {
@@ -57,34 +61,56 @@ header {
 		top: 0;
 		background: rgb(255, 102, 0);
 		background: $gradiant;
-		.row {
-			padding-top: 10px;
-			padding-bottom: 10px;
-			transition: 0.5s ease;
-			#menu-icon {
-				margin-top: 10px;
+
+		.container {
+			&__triangle {
+				transition: 0.2s ease;
+				top: -350px;
+			}
+			&__menu {
+				height: 50px;
+				transition: 0.5s ease;
 			}
 		}
-		.triangle {
-			transition: 0.2s ease;
-			top: -350px;
-		}
 	}
+}
 
-	.row {
-		padding-top: 50px;
-		transition: 0.2s ease;
+.container {
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100px;
+		margin: 0 50px;
+		transition: 0.5s ease;
 	}
-	.triangle {
+	&__triangle {
 		position: absolute;
 		pointer-events: none;
 		transition: 0.2s ease;
 		top: 0;
 		left: 0;
 	}
+
+	&__introduction {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		&__wrapper {
+			&__title {
+				&--white {
+					color: #fff;
+				}
+			}
+
+			&__text {
+				&--white {
+					color: #fff;
+				}
+			}
+		}
+	}
 }
-
-
 
 .shape {
 	animation: logoEntrance;
@@ -107,8 +133,6 @@ header {
 	position: relative;
 	z-index: 5;
 }
-
-
 
 .loading {
 	z-index: 2;
@@ -141,8 +165,6 @@ header {
 	}
 }
 
-
-
 .introduction {
 	height: 100vh;
 	display: flex;
@@ -160,7 +182,6 @@ header {
 	}
 }
 
-
 .bg {
 	position: absolute;
 	pointer-events: none;
@@ -176,10 +197,6 @@ header {
 		max-width: 1580px !important;
 	}
 }
-
-
-
-
 
 /* 
 

@@ -9,9 +9,6 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
- /*    "boostrap": "^2.0.0",
-    "bootstrap": "^5.2.3",
-    "bootstrap-vue": "^2.23.1", */
     "i": "^0.3.7",
     "sass": "^1.58.3",
     "scroll-snap": "^4.0.3",

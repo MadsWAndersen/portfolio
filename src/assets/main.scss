@@ -33,6 +33,10 @@ body {
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+  }
+
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -148,6 +152,12 @@ header {
 		}
 
 		&__wrapper {
+			@media (max-width: $breakpoint-sm) {
+			 h1 {
+				font-size: 2.2em;
+			 }
+			}
+			margin-right: 20%;
 			&__title {
 				&--white {
 					color: #fff;
@@ -228,26 +238,35 @@ header {
 }
 
 
-#typewriter-text {
-	font-size: 24px;
-	font-family: monospace;
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: 2px solid #000;
-	width: 20em;
-	animation: typing 1s steps(8) infinite alternate;
+.ml14 {
+	font-weight: 200;
+	font-size: 3.2em;
+	color: #fff;
   }
   
-  @keyframes typing {
-	from {
-	  width: 0;
-	}
-	to {
-	  width: 10em;
-	}
+  .ml14 .text-wrapper {
+	position: relative;
+	display: inline-block;
+	padding-top: 0.1em;
+	padding-right: 0.05em;
+	padding-bottom: 0.15em;
   }
-
-
+  
+  .ml14 .line {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background-color: #fff;
+	transform-origin: 100% 100%;
+	bottom: 0;
+  }
+  
+  .ml14 .letter {
+	display: inline-block;
+	line-height: 1em;
+  }
 
 @keyframes movingCta {
 	0% {

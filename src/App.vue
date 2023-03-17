@@ -1,6 +1,8 @@
+
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import { ref, onMounted } from 'vue';
+import anime from 'animejs';
 
 // Import components //
 import Menu from './components/Menu.vue';
@@ -12,6 +14,8 @@ import PortraitPicture from './components/PortraitPicture.vue';
 import Triangle from './components/layout/Triangle.vue';
 import Loading from './components/layout/Loading.vue';
 import ContactForm from './components/layout/ContactForm.vue';
+
+
 
 // Define variables //
 const showMenu = ref(false);
@@ -27,11 +31,38 @@ function handleMenuClick() {
   showMenu.value = !showMenu.value;
 }
 
-
+const myElement = ref(null);
 
 // Call mounted hook //
 onMounted(() => {
+  // Wrap every letter in a span
+  var textWrapper = document.querySelector('.ml14 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml14 .line',
+    scaleX: [0,1],
+    opacity: [0.5,1],
+    easing: "easeInOutExpo",
+    duration: 900
+  }).add({
+    targets: '.ml14 .letter',
+    opacity: [0,1],
+    translateX: [40,0],
+    translateZ: 0,
+    scaleX: [0.3, 1],
+    easing: "easeOutExpo",
+    duration: 800,
+    offset: '-=600',
+    delay: (el, i) => 150 + 25 * i
+  }).add({
+    targets: '.ml14',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
 });
 </script>
 <template>
@@ -54,12 +85,19 @@ onMounted(() => {
     </div>
   </div>
 </header>
+
+
 <!-- Home section -->
 <section id="home">
   <div class="container">
     <div class="container__introduction">
       <div class="container__introduction__wrapper">
-        <h1 id="typewriter-text" class="container__introduction__wrapper__title--white"></h1>
+        <h1 class="ml14">
+          <span class="text-wrapper">
+            <span class="letters">Welcome!</span>
+            <span class="line"></span>
+          </span>
+        </h1>
         <p class="container__introduction__wrapper__text--white">Welcome to my portfolio! I am an ambitious web development student with a passion for creating effective and engaging websites. My education, as well as my experience in the industry, has given me a strong understanding of front-end technologies, and I am always eager to learn more and improve my skills.<br>
           <br> Thanks for visiting my site!
         </p>
@@ -72,12 +110,19 @@ onMounted(() => {
         <a href="#about" class="container__introduction__cta__arrow"></a>
       </div>
     </div>
-    
-
   </div>
 </section>
+
+
+
 <!-- About section -->
 <section id="about" class="container">
+  <Experience />
+</section>
+
+
+<!-- Contact section -->
+<section class="container" id="contact">
   <div class="container__bg">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1428.019" height="919.513" viewBox="0 0 1428.019 919.513">
       <defs>
@@ -102,9 +147,6 @@ onMounted(() => {
       </g>
     </svg>
   </div>
-  <Experience />
-</section>
-<section class="container" id="contact">
   <ContactForm/>
 </section>
 

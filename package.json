@@ -9,12 +9,15 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "animejs": "^3.2.1",
     "i": "^0.3.7",
     "sass": "^1.58.3",
     "scroll-snap": "^4.0.3",
     "serve": "^14.2.0",
+    "typed.js": "^2.0.132",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6",
+    "vue-typed-js": "^0.1.2",
     "vue3-particles": "^2.9.3"
   },
   "devDependencies": {

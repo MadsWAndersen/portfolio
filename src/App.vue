@@ -27,9 +27,11 @@ function handleMenuClick() {
   showMenu.value = !showMenu.value;
 }
 
+
+
 // Call mounted hook //
 onMounted(() => {
-  // Add any additional code here if needed //
+
 });
 </script>
 <template>
@@ -57,15 +59,21 @@ onMounted(() => {
   <div class="container">
     <div class="container__introduction">
       <div class="container__introduction__wrapper">
-        <h1 class="container__introduction__wrapper__title--white">Velkommen!</h1>
-        <p class="container__introduction__wrapper__text--white">Velkommen til min portefølje! Jeg er en ambitiøs webudviklingsstuderende med en passion for at skabe effektive og engagerende websteder. Min uddannelse, samt erfaring fra erhvervet har givet mig en solid forståelse af front-end teknologier, og jeg er altid ivrig efter at lære mere og forbedre mine færdigheder. <br>
-          <br> Tak fordi du besøger min side!
+        <h1 id="typewriter-text" class="container__introduction__wrapper__title--white"></h1>
+        <p class="container__introduction__wrapper__text--white">Welcome to my portfolio! I am an ambitious web development student with a passion for creating effective and engaging websites. My education, as well as my experience in the industry, has given me a strong understanding of front-end technologies, and I am always eager to learn more and improve my skills.<br>
+          <br> Thanks for visiting my site!
         </p>
       </div>
       <div class="container__introdution__wrapper__image">
         <PortraitPicture />
       </div>
+
+      <div class="container__introduction__cta">
+        <a href="#about" class="container__introduction__cta__arrow"></a>
+      </div>
     </div>
+    
+
   </div>
 </section>
 <!-- About section -->

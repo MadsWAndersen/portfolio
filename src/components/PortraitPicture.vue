@@ -13,35 +13,25 @@
 </script>
 
 <style lang="scss" scoped>
-@keyframes flipme {
-	0% {
-		transform: rotateY(-20deg) rotateX(0deg);
-	}
+@import "/src/assets/main.scss";
 
-	50% {
-		transform: rotateY(0deg) rotateX(10deg);
-	}
-
-	100% {
-		transform: rotateY(-20deg) rotateX(0deg);
+@media (max-width: $breakpoint-sm) {
+	.img {
+		display: none;
 	}
 }
-
 .img {
-	transform: scale(0.7);
+	transform: scale(1);
 
 	.img__container {
 		position: relative;
 		width: 450px;
-		height: 802px;
-		transform: rotateY(0deg) rotateX(0deg) scale(0.5);
-		transform-style: preserve-3d;
-		animation: 15s flipme linear infinite;
+		height: 800px;
 		transition: transform 300ms ease;
 		transform-origin: 50% 50%;
 
 		&:hover {
-			transform: rotateY(30deg) rotateX(5deg);
+			transform: rotateY(15deg) rotateX(5deg);
 			cursor: pointer;
 		}
 

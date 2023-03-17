@@ -15,7 +15,7 @@ import { ref, onMounted } from 'vue'
 
 <style lang="scss" scoped>
 #menu {
-  
+  z-index: 1;
   position: fixed;
   right: 0;
   top: 0;

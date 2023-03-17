@@ -1,9 +1,5 @@
 <template>
-	<div id="menu-icon" :class="{ active: isActive }" @click="toggleActive">
-		<span class="menu-icon__line menu-icon__line-left"></span>
-		<span class="menu-icon__line menu-icon__line-center"></span>
-		<span class="menu-icon__line menu-icon__line-right"></span>
-	</div>
+
 </template>
 
 <script setup>

@@ -4,13 +4,7 @@ import { ref, onMounted } from 'vue'
 </script>
 
 <template>
-  <div id="menu">
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#test">Test</a>
-    </nav>
-  </div>
+
 </template>
 
 <style lang="scss" scoped>

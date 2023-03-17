@@ -20,6 +20,8 @@ import ContactForm from './components/layout/ContactForm.vue';
 // Define variables //
 const showMenu = ref(false);
 const isScrolled = ref(false);
+const isActive = ref(false);
+
 
 // Add event listener to detect scroll //
 window.addEventListener('scroll', () => {
@@ -29,15 +31,15 @@ window.addEventListener('scroll', () => {
 // Handle menu click //
 function handleMenuClick() {
   showMenu.value = !showMenu.value;
+  isActive.value = !isActive.value
 }
 
-const myElement = ref(null);
 
 // Call mounted hook //
 onMounted(() => {
   // Wrap every letter in a span
   var textWrapper = document.querySelector('.ml14 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({loop: true})
   .add({
@@ -69,7 +71,17 @@ anime.timeline({loop: true})
   <!-- Header component -->
 
 <Loading />
-<Menu :class="{ active: showMenu }" />
+
+
+<div id="menu" :class="{ active: showMenu }">
+    <nav>
+      <a @click="handleMenuClick" href="#home">Home</a>
+      <a @click="handleMenuClick" href="#about">About</a>
+      <a @click="handleMenuClick" href="#contact">Contact</a>
+    </nav>
+</div>
+
+
 <header :class="{ 'header-scroll': isScrolled }">
   <div class="container header">
     <div class="container__triangle">
@@ -80,7 +92,11 @@ anime.timeline({loop: true})
         <Logo />
       </div>
       <div class="container__menu_hamburger">
-        <Hamburger @click="handleMenuClick" />
+        <div id="menu-icon" :class="{ active: isActive }" @click="handleMenuClick">
+		<span class="menu-icon__line menu-icon__line-left"></span>
+		<span class="menu-icon__line menu-icon__line-center"></span>
+		<span class="menu-icon__line menu-icon__line-right"></span>
+	</div>
       </div>
     </div>
   </div>

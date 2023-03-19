@@ -5,12 +5,9 @@ import { ref, onMounted } from 'vue';
 import anime from 'animejs';
 
 // Import components //
-import Menu from './components/Menu.vue';
-import Email from './components/Email.vue';
+
 import Logo from './components/Logo.vue';
-import Experience from './components/Experience.vue';
-import Hamburger from './components/Hamburger.vue';
-import PortraitPicture from './components/PortraitPicture.vue';
+import Experience from './components/Experience.vue';import PortraitPicture from './components/PortraitPicture.vue';
 import Triangle from './components/layout/Triangle.vue';
 import Loading from './components/layout/Loading.vue';
 import ContactForm from './components/layout/ContactForm.vue';

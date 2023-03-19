@@ -38,13 +38,14 @@ onMounted(() => {
   var textWrapper = document.querySelector('.ml14 .letters');
   textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline({loop: true})
+anime.timeline({loop: false})
   .add({
     targets: '.ml14 .line',
     scaleX: [0,1],
     opacity: [0.5,1],
     easing: "easeInOutExpo",
-    duration: 900
+    duration: 900,
+    delay: 4000,
   }).add({
     targets: '.ml14 .letter',
     opacity: [0,1],
@@ -55,13 +56,7 @@ anime.timeline({loop: true})
     duration: 800,
     offset: '-=600',
     delay: (el, i) => 150 + 25 * i
-  }).add({
-    targets: '.ml14',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
+  })
 });
 </script>
 <template>
@@ -111,7 +106,7 @@ anime.timeline({loop: true})
             <span class="line"></span>
           </span>
         </h1>
-        <p class="container__introduction__wrapper__text--white">Welcome to my portfolio! I am an ambitious web development student with a passion for creating effective and engaging websites. My education, as well as my experience in the industry, has given me a strong understanding of front-end technologies, and I am always eager to learn more and improve my skills.<br>
+        <p class="container__introduction__wrapper__text--white">Welcome to my portfolio! My name is Mads and I am an ambitious web development student with a passion for creating effective and engaging websites. My education, as well as my experience in the industry, has given me a strong understanding of front-end technologies, and I am always eager to learn more and improve my skills.<br>
           <br> Thanks for visiting my site! 
         </p>
       </div>
@@ -129,11 +124,11 @@ anime.timeline({loop: true})
 
 
 <!-- About section -->
-<section id="about" class="container">
+<!-- <section id="about" class="container">
   <Experience />
 </section>
 
-
+ -->
 <!-- Contact section -->
 <section class="container" id="contact">
   <div class="container__bg">

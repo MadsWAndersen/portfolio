@@ -110,7 +110,7 @@
             background-position: center center;
             background-repeat: no-repeat;
 
-            animation: bg-spin 3s linear infinite;
+            animation: bg-spin 9s linear infinite;
             @keyframes bg-spin {
                 to {
                 --border-angle: 1turn;

@@ -40,8 +40,18 @@ html {
 	scroll-behavior: smooth;
   }
 
-h2 {
+h1, h2, h3 {
 	font-family: "Mark Pro Bold";
+	color: #fff;
+}
+
+h2 {
+	font-size: 3.2em;
+	margin: 0;
+}
+
+p {
+	color: #fff;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -89,21 +99,10 @@ header {
 	}
 }
 
+
+
 .container {
 	position: relative;
-
-	&#about {
-		height: 100vh;
-		width: 100vw;
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	
-	
-
 	&.header {
 		max-width: 1600px;
 		margin: auto;
@@ -384,7 +383,7 @@ header {
 
 }  
 
-@keyframes movingCta {
+ @keyframes movingCta {
 	0% {
 		bottom: 5%;
 		}
@@ -397,7 +396,7 @@ header {
 		bottom: 5%;
 	}
 }
-
+/*
 @keyframes stopOverflow {
 	0% {
 		overflow-y: hidden;
@@ -477,3 +476,4 @@ header {
 		transform: scale(1);
 	}
 }
+ */

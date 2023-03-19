@@ -7,7 +7,8 @@ import anime from 'animejs';
 // Import components //
 
 import Logo from './components/Logo.vue';
-import Experience from './components/Experience.vue';import PortraitPicture from './components/PortraitPicture.vue';
+import Experience from './components/Experience.vue';
+import PortraitPicture from './components/PortraitPicture.vue';
 import Triangle from './components/layout/Triangle.vue';
 import Loading from './components/layout/Loading.vue';
 import ContactForm from './components/layout/ContactForm.vue';
@@ -124,11 +125,11 @@ anime.timeline({loop: false})
 
 
 <!-- About section -->
-<!-- <section id="about" class="container">
+ <section id="about">
   <Experience />
 </section>
 
- -->
+
 <!-- Contact section -->
 <section class="container" id="contact">
   <div class="container__bg">

@@ -10,7 +10,7 @@
         <input type="text" name="name" id="full-name" placeholder="" required v-model="nameValue" @blur="onInputBlurN">
       </div>
 
-      <div class="form2 form__2" :class="{ active: emailActive }" @click="toggleEmailActive">
+      <div class="form form__2" :class="{ active: emailActive }" @click="toggleEmailActive">
         <label for="email-address">Email</label>
         <input type="email" name="_replyto" id="email-address" placeholder="" required="" v-model="emailValue"
           @blur="onInputBlurE">

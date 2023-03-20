@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
+    "test": "vitest --dom",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "animejs": "^3.2.1",
+    "happy-dom": "^8.9.0",
     "i": "^0.3.7",
     "sass": "^1.58.3",
     "scroll-snap": "^4.0.3",
@@ -21,12 +23,19 @@
     "vue3-particles": "^2.9.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
     "@rushstack/eslint-patch": "^1.1.4",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/test-utils": "^2.3.1",  
     "eslint": "^8.22.0",
     "eslint-plugin-vue": "^9.3.0",
     "prettier": "^2.7.1",
-    "vite": "^4.0.0"
+    "vite": "^4.0.0",
+    "vitest": "^0.29.3"
+  },
+  "transform": {
+    "\\.js$": "<rootDir>/node_modules/babel-jest"
   }
 }

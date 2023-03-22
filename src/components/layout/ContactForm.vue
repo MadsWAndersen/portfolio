@@ -95,6 +95,9 @@ function onInputBlurM() {
     display: flex;
     flex-direction: column;
     background: linear-gradient(90deg, rgba(255, 102, 0, 1) 0%, rgba(213, 141, 94, 1) 100%);
+    @media (max-width: $breakpoint-sm) {
+      padding: 20px;
+    }
 
     h2 {
       margin: 0 0 20px 0;

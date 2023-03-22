@@ -81,11 +81,13 @@
 </script>
 
 <style lang="scss" scoped>
+@import "/src/assets/main.scss";
+
     .container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 0 100px;
+        margin: $dmargin;
         height: 100%;
         p {
             width: 70%;
@@ -125,6 +127,16 @@
   syntax: "<angle>";
   inherits: true;
   initial-value: 0turn;
+}
+
+@media (max-width: $breakpoint-sm) {
+  .container {
+    margin: $dmarginM;
+    height: unset;
+    p {
+      width: 100%;
+    }
+  }
 }
 
 </style>

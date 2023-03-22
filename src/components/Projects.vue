@@ -70,37 +70,37 @@
   </script>
   
   <style lang="scss" scoped>
+  @import "/src/assets/main.scss";
   .projects {
     display: flex;
-    margin: 0 100px;
+    margin: 0 20px;
     gap: 20px;
     flex-wrap: wrap;
     position: relative;
 
-
+    
     .line-deco {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
     }
+    
     .project {
-      width: 30%;
-
-      cursor: pointer;
-
+      width: 100%; // Full width for mobile devices
+      
       .project-image {
         width: 100%;
-        height: 330px;
+        height: auto; // Adjusts the height of the image automatically
         object-fit: cover;
       }
-
+      
       .project-title {
         margin-top: 0.5rem;
       }
     }
   }
-
+  
   .project-modal {
     display: flex;
     position: fixed;
@@ -114,26 +114,58 @@
     align-items: center;
     z-index: 100;
     padding: 5%;
+    
     .modal-info {
-        flex-basis: 50%;
-        padding: 20px;
-        button {
+      flex-basis: 50%;
+      padding: 20px;
+      button {
         margin: auto;
         display: flex;
-         }
+      }
     }
+    
     .modal-project-image {
       width: 50%;
       flex-basis: 50%;
     }
-
+    
     .modal-project-title {
       margin-top: 0.5rem;
       color: #fff;
     }
-
+    
     .modal-project-description {
       color: #fff;
+    }
+  }
+  
+  // Media query for mobile devices
+  @media (max-width: 767px) {
+    .projects {
+      margin: $dmarginM;
+      gap: 10px;
+    }
+    
+    .project {
+      width: 100%;
+      margin-bottom: 20px;
+      
+      .project-image {
+        height: 200px;
+      }
+    }
+    
+    .project-modal {
+      padding: 2%;
+      
+      .modal-info {
+        flex-basis: 100%;
+      }
+      
+      .modal-project-image {
+        width: 100%;
+        flex-basis: 100%;
+      }
     }
   }
 </style>

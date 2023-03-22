@@ -7,7 +7,7 @@ $colorCharcoal: #1d1d20;
 $gradiant: linear-gradient(90deg, rgba(255, 102, 0, 1) 0%, rgba(213, 141, 94, 1) 100%);
 
 $dmargin: 0 100px;
-$dmarginM: 0 45px;
+$dmarginM: 0 20px;
 
 $breakpoint-xs: 575.98px;
 $breakpoint-sm: 767.98px;
@@ -61,7 +61,7 @@ p {
 section {
 	max-width: 1580px;
 	margin: auto;
-	height: 100vh;
+	min-height: 100vh;
 	&#contact {
 		justify-content: center;
 		align-items: center;
@@ -98,6 +98,7 @@ header {
 		}
 	}
 }
+
 
 
 
@@ -160,6 +161,7 @@ header {
 			 h1 {
 				font-size: 2.2em;
 			 }
+			 margin-right: 0%;
 			}
 			margin-right: 20%;
 			&__title {

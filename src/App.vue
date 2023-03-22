@@ -12,6 +12,7 @@ import PortraitPicture from './components/PortraitPicture.vue';
 import Triangle from './components/layout/Triangle.vue';
 import Loading from './components/layout/Loading.vue';
 import ContactForm from './components/layout/ContactForm.vue';
+import Projects from './components/Projects.vue';
 
 
 
@@ -128,6 +129,13 @@ anime.timeline({loop: false})
  <section id="about">
   <Experience />
 </section>
+
+
+<!-- Projects -->
+<section id="projects">
+  <Projects />
+</section>
+
 
 
 <!-- Contact section -->

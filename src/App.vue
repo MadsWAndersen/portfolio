@@ -102,13 +102,16 @@ anime.timeline({loop: false})
   <div class="container">
     <div class="container__introduction">
       <div class="container__introduction__wrapper">
+        <img class="container__img" src="src\assets\img\MadsP.jpg" alt="">
         <h1 class="ml14">
           <span class="text-wrapper">
             <span class="letters">Welcome!</span>
             <span class="line"></span>
           </span>
         </h1>
-        <p class="container__introduction__wrapper__text--white">Welcome to my portfolio! My name is Mads and I am an ambitious web development student with a passion for creating effective and engaging websites. My education, as well as my experience in the industry, has given me a strong understanding of front-end technologies, and I am always eager to learn more and improve my skills.<br>
+        <p class="container__introduction__wrapper__text--white">
+        
+          Welcome to my portfolio! My name is Mads and I am an ambitious web development student with a passion for creating effective and engaging websites. My education, as well as my experience in the industry, has given me a strong understanding of front-end technologies, and I am always eager to learn more and improve my skills.<br>
           <br> Thanks for visiting my site! 
         </p>
       </div>

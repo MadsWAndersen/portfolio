@@ -48,21 +48,6 @@
       title: 'Project 3',
       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       image: 'https://via.placeholder.com/300x200'
-    },
-    {
-      title: 'Project 4',
-      description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-      image: 'https://via.placeholder.com/300x200'
-    },
-    {
-      title: 'Project 5',
-      description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      image: 'https://via.placeholder.com/300x200'
-    },
-    {
-      title: 'Project 6',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: 'https://via.placeholder.com/300x200'
     }
   ]);
   
@@ -87,9 +72,15 @@
     }
     
     .project {
-      width: 100%; // Full width for mobile devices
+      cursor: pointer;
+      width: 30%; // Full width for mobile devices
+
+      @media (max-width: $breakpoint-sm) {
+        width: 100%;
+      }
       
       .project-image {
+        min-height: 250px;
         width: 100%;
         height: auto; // Adjusts the height of the image automatically
         object-fit: cover;

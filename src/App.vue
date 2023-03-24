@@ -102,7 +102,7 @@ anime.timeline({loop: false})
   <div class="container">
     <div class="container__introduction">
       <div class="container__introduction__wrapper">
-        <img class="container__img" src="src\assets\img\MadsP.jpg" alt="">
+        <img class="container__img" src="/src/assets/img/MadsP.jpg" alt="">
         <h1 class="ml14">
           <span class="text-wrapper">
             <span class="letters">Welcome!</span>

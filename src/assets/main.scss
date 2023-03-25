@@ -20,7 +20,12 @@ $breakpoint-lg: 1199.98px;
 
 @import url("https://fonts.cdnfonts.com/css/mark-pro");
 
-@font-face {font-family: "Mark Pro Bold"; src: url("/src/fonts/01d273202731e44f0f1187f3afcaf156.eot"); src: url("src/fonts/01d273202731e44f0f1187f3afcaf156.ttf") format("embedded-opentype"), url("src/fonts/01d273202731e44f0f1187f3afcaf156.woff") format("woff"), url("src\fonts\01d273202731e44f0f1187f3afcaf156.woff2") format("truetype"), url("//db.onlinewebfonts.com/t/01d273202731e44f0f1187f3afcaf156.svg#Mark Pro") format("svg"); }
+@font-face {
+	font-family: "Mark Pro Bold"; 
+	src: url("/src/fonts/01d273202731e44f0f1187f3afcaf156.eot"); 
+	src: url("src/fonts/01d273202731e44f0f1187f3afcaf156.ttf") format("embedded-opentype"), 
+	url("src/fonts/01d273202731e44f0f1187f3afcaf156.woff") format("woff"), 
+	url("src/fonts/01d273202731e44f0f1187f3afcaf156.woff2") format("truetype"), url("//db.onlinewebfonts.com/t/01d273202731e44f0f1187f3afcaf156.svg#Mark Pro") format("svg"); }
 
 * {
 	font-family: "Mark Pro", sans-serif;

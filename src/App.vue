@@ -115,6 +115,30 @@ anime.timeline({loop: false})
           Welcome to my portfolio! My name is Mads and I am an ambitious web development student with a passion for creating effective and engaging websites. My education, as well as my experience in the industry, has given me a strong understanding of front-end technologies, and I am always eager to learn more and improve my skills.<br>
           <br> Thanks for visiting my site! 
         </p>
+
+        <a href="https://welling.nu/CV.pdf">
+          <svg xmlns="http://www.w3.org/2000/svg" width="38.769" height="47.647" viewBox="0 0 38.769 47.647">
+  <g id="Group_14" data-name="Group 14" transform="translate(-219 -1951.353)">
+    <g id="resume-4-svgrepo-com" transform="translate(171.3 1951.353)">
+      <path id="Path_50" data-name="Path 50" d="M78.475,0H55.692A8,8,0,0,0,47.7,7.994V39.655a8,8,0,0,0,7.992,7.992H76.06l.867-.866L85.6,38.105l.866-.866V7.994A8,8,0,0,0,78.475,0Zm5.034,36.013H79.029a4.2,4.2,0,0,0-4.195,4.195v4.48H55.692a5.033,5.033,0,0,1-5.033-5.033V7.994A5.034,5.034,0,0,1,55.692,2.96H78.475a5.034,5.034,0,0,1,5.034,5.034V36.013Z" transform="translate(0)" fill="#f60"/>
+    </g>
+    <g id="letter-cc-svgrepo-com" transform="translate(229.037 1967.445)">
+      <path id="Path_52" data-name="Path 52" d="M15,22.908H9a1.993,1.993,0,0,1-2-1.987V10.987A1.993,1.993,0,0,1,9,9h6v1.987H9v9.935h6Z" transform="translate(-6.921 -8.088)" fill="#f60"/>
+      <g id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" transform="translate(0 -0.177)">
+        <rect id="Rectangle_24" data-name="Rectangle 24" width="8" height="15.908" fill="none"/>
+      </g>
+    </g>
+    <g id="letter-vv-svgrepo-com" transform="translate(238.732 1967.824)">
+      <path id="Path_54" data-name="Path 54" d="M13,9,11,22,9,9H7L9.52,23h2.96L15,9Z" transform="translate(-6.664 -8.412)" fill="#f60"/>
+      <rect id="Rectangle_25" data-name="Rectangle 25" width="9" height="15" transform="translate(0 0.176)" fill="none"/>
+    </g>
+  </g>
+</svg>
+
+
+        </a>
+
+
       </div>
       <div class="container__introdution__wrapper__image">
         <PortraitPicture />

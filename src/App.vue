@@ -71,6 +71,7 @@ anime.timeline({loop: false})
     <nav>
       <a @click="handleMenuClick" href="#home">Home</a>
       <a @click="handleMenuClick" href="#about">About</a>
+      <a @click="handleMenuClick" href="#projects">Projects</a>
       <a @click="handleMenuClick" href="#contact">Contact</a>
     </nav>
 </div>

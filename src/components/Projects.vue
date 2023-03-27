@@ -1,7 +1,5 @@
 <template>
-  <h2>Projectz
-
-  </h2>
+  <h2>Project</h2>
   <div class="projects">
 
     <div v-for="(project, index) in projects" :key="index" class="project" @click="showModal(project)">

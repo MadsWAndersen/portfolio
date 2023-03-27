@@ -1,5 +1,5 @@
 <template>
-  <h2>Project</h2>
+  <h2>Projects</h2>
   <div class="projects">
 
     <div v-for="(project, index) in projects" :key="index" class="project" @click="showModal(project)">
@@ -75,10 +75,9 @@ const projects = ref([
 <style lang="scss" scoped>
 @import "/src/assets/main.scss";
 
-a {
-  color: #fff !important;
-  font-weight: bold;
-}
+
+
+
 
 .projects {
   display: flex;
@@ -100,7 +99,7 @@ a {
     cursor: pointer;
     width: 30%; // Full width for mobile devices
 
-    @media (max-width: $breakpoint-sm) {
+    @media (max-width: $breakpoint-md) {
       width: 100%;
     }
 
@@ -149,7 +148,7 @@ button {
   z-index: 100;
   padding: 5%;
 
-  @media (max-width: $breakpoint-sm) {
+  @media (max-width: $breakpoint-md) {
     flex-direction: column;
     overflow: scroll;
   }

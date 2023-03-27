@@ -57,7 +57,7 @@ h3 {
 h2 {
 	font-size: 3.2em;
 	margin: 0;
-	@media (max-width: $breakpoint-sm) {
+	@media (max-width: $breakpoint-md) {
 		font-size: 2em;
 	}
 }
@@ -81,14 +81,19 @@ section {
 		flex-direction: column;
 		align-items: center;
 		gap: 50px;
+		@media (max-width: $breakpoint-md) {
+			min-height: unset;
+			margin: unset;
+		}
 	}
 	&#contact {
 		justify-content: center;
 		align-items: center;
 		display: flex;
 		width: 100%;
-		@media (max-width: $breakpoint-sm) {
+		@media (max-width: $breakpoint-md) {
 			height: unset;
+			min-height: unset;
 		}
 	}
 }
@@ -117,14 +122,21 @@ header {
 			&__menu {
 				height: 50px;
 				transition: 0.5s ease;
+				padding: 0;
 			}
 		}
 	}
 }
 
+p {
+	a {
+		color: $colorOrange !important;
+	}
+}
+
 .container {
 	&__img {
-		@media (min-width: $breakpoint-sm) {
+		@media (min-width: $breakpoint-md) {
 			display: none;
 		}
 		width: 100%;
@@ -145,7 +157,7 @@ header {
 		margin: 0 60px;
 		padding-top: 10px;
 		transition: 0.5s ease;
-		@media (max-width: $breakpoint-sm) {
+		@media (max-width: $breakpoint-md) {
 			margin: $dmarginM;
 		}
 	}
@@ -163,7 +175,7 @@ header {
 		align-items: center;
 		margin: $dmargin;
 
-		@media (max-width: $breakpoint-sm) {
+		@media (max-width: $breakpoint-md) {
 			flex-wrap: wrap;
 			margin: $dmarginM;
 		}
@@ -182,7 +194,7 @@ header {
 		}
 
 		&__wrapper {
-			@media (max-width: $breakpoint-sm) {
+			@media (max-width: $breakpoint-md) {
 				h1 {
 					font-size: 2.2em;
 				}
@@ -208,6 +220,9 @@ header {
 		pointer-events: none;
 		opacity: 0.2;
 		z-index: -1;
+		@media (max-width: $breakpoint-md) {
+			display: none;
+		}
 		svg {
 			width: 100vw;
 		}
@@ -260,7 +275,7 @@ header {
 		animation: scaleText;
 		animation-duration: 2s;
 		position: relative;
-		top: 50%;
+		top: 45%;
 		transform: translateY(-50%);
 		margin: 0 auto;
 		width: 320px;

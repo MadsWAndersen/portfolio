@@ -15,7 +15,7 @@
 <style lang="scss" scoped>
 @import "/src/assets/main.scss";
 
-@media (max-width: $breakpoint-sm) {
+@media (max-width: $breakpoint-md) {
 	.img {
 		display: none;
 	}

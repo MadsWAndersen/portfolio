@@ -76,6 +76,7 @@ section {
 	min-height: 100vh;
 	margin-bottom: 100px;
 	&#projects {
+		scroll-margin-top: 100px;
 		min-height: 80vh;
 		display: flex;
 		flex-direction: column;
@@ -126,6 +127,12 @@ header {
 			}
 		}
 	}
+}
+
+.socials {
+	display: flex;
+	gap: 10px;
+	align-items: bottom;
 }
 
 p {

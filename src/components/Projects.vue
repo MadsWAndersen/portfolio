@@ -38,7 +38,7 @@ function hideModal() {
 
 const projects = ref([
   {
-    title: 'UCL Student Counseling',
+    title: 'UCLs Student Counseling',
     description: 'New way of reporting data for UCL Study Counsel',
     longdesc: 'My group and I had the opportunity to create a product for UCL that eliminated the need for study counseling to use Google Forms. The product we developed involved building a database, creating a web API, and coding the frontend using Vue.\n\n' +
       'Throughout the development process, we gained valuable experience working with the Model-View-Controller (MVC) principles. These principles helped us to keep the different components of our product organized and easy to manage.\n\n' +

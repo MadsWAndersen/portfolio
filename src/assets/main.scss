@@ -21,11 +21,13 @@ $breakpoint-lg: 1199.98px;
 @import url("https://fonts.cdnfonts.com/css/mark-pro");
 
 @font-face {
-	font-family: "Mark Pro Bold"; 
-	src: url("/src/fonts/01d273202731e44f0f1187f3afcaf156.eot"); 
-	src: url("src/fonts/01d273202731e44f0f1187f3afcaf156.ttf") format("embedded-opentype"), 
-	url("src/fonts/01d273202731e44f0f1187f3afcaf156.woff") format("woff"), 
-	url("src/fonts/01d273202731e44f0f1187f3afcaf156.woff2") format("truetype"), url("//db.onlinewebfonts.com/t/01d273202731e44f0f1187f3afcaf156.svg#Mark Pro") format("svg"); }
+	font-family: "Mark Pro Bold";
+	src: url("/fonts/01d273202731e44f0f1187f3afcaf156.eot");
+	src: url("/fonts/01d273202731e44f0f1187f3afcaf156.ttf") format("embedded-opentype"),
+		url("/fonts/01d273202731e44f0f1187f3afcaf156.woff") format("woff"),
+		url("/fonts/01d273202731e44f0f1187f3afcaf156.woff2") format("truetype"),
+		url("//db.onlinewebfonts.com/t/01d273202731e44f0f1187f3afcaf156.svg#Mark Pro") format("svg");
+}
 
 * {
 	font-family: "Mark Pro", sans-serif;
@@ -43,9 +45,11 @@ body {
 
 html {
 	scroll-behavior: smooth;
-  }
+}
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	font-family: "Mark Pro Bold";
 	color: #fff;
 }
@@ -118,11 +122,7 @@ header {
 	}
 }
 
-
-
-
 .container {
-
 	&__img {
 		@media (min-width: $breakpoint-sm) {
 			display: none;
@@ -131,7 +131,6 @@ header {
 		height: 220px;
 		object-fit: cover;
 		margin-top: 100px;
-	
 	}
 	position: relative;
 	&.header {
@@ -139,7 +138,7 @@ header {
 		margin: auto;
 	}
 	&__menu {
-	    display: flex;
+		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		height: 100px;
@@ -163,15 +162,11 @@ header {
 		display: flex;
 		align-items: center;
 		margin: $dmargin;
-	
 
 		@media (max-width: $breakpoint-sm) {
 			flex-wrap: wrap;
 			margin: $dmarginM;
-	
 		}
-
-
 
 		&__cta {
 			position: absolute;
@@ -180,7 +175,7 @@ header {
 			left: 50%;
 			transform: translateX(-50%);
 			transition: 0.2s ease;
-		
+
 			&__arrow {
 				content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='68' height='68' viewBox='0 0 68 68'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='0.5' x2='0.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23f60'/%3E%3Cstop offset='1' stop-color='%23d58d5e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg id='Group_10' data-name='Group 10' transform='translate(-926 -911)'%3E%3Ccircle id='Ellipse_1' data-name='Ellipse 1' cx='34' cy='34' r='34' transform='translate(926 911)' fill='url(%23linear-gradient)'/%3E%3Cg id='Group_7' data-name='Group 7' transform='translate(89 15)'%3E%3Cpath id='Polygon_1' data-name='Polygon 1' d='M8,0l8,14H0Z' transform='translate(879 947) rotate(180)' fill='%23fff'/%3E%3Crect id='Rectangle_3' data-name='Rectangle 3' width='2' height='19' transform='translate(870 914)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
 			}
@@ -188,10 +183,10 @@ header {
 
 		&__wrapper {
 			@media (max-width: $breakpoint-sm) {
-			 h1 {
-				font-size: 2.2em;
-			 }
-			 margin-right: 0%;
+				h1 {
+					font-size: 2.2em;
+				}
+				margin-right: 0%;
 			}
 			margin-right: 20%;
 			&__title {
@@ -278,17 +273,17 @@ header {
 	font-size: 3.2em;
 	color: #fff;
 	font-family: "Mark Pro Bold";
-  }
-  
-  .ml14 .text-wrapper {
+}
+
+.ml14 .text-wrapper {
 	position: relative;
 	display: inline-block;
 	padding-top: 0.1em;
 	padding-right: 0.05em;
 	padding-bottom: 0.15em;
-  }
-  
-  .ml14 .line {
+}
+
+.ml14 .line {
 	opacity: 0;
 	position: absolute;
 	left: 0;
@@ -297,16 +292,15 @@ header {
 	background-color: #fff;
 	transform-origin: 100% 100%;
 	bottom: 0;
-  }
-  
-  .ml14 .letter {
+}
+
+.ml14 .letter {
 	display: inline-block;
 	line-height: 1em;
 	font-family: "Mark Pro Bold";
-  }
+}
 
-
-  #menu {
+#menu {
 	z-index: 1;
 	position: fixed;
 	right: 0;
@@ -317,30 +311,29 @@ header {
 	background: linear-gradient(90deg, rgba(255, 102, 0, 1) 0%, rgba(213, 141, 94, 1) 100%);
 	transform: translateX(100vw);
 	transition: all 1000ms cubic-bezier(1, -0.22, 0.765, 1);
-  
-	&.active {
-	  transform: translateX(0px);
-	}
-  
-	nav {
-	  flex-direction: column;
-	  display: flex;
-	  gap: 10px;
-	  height: 100%;
-	  justify-content: center;
-	  align-items: center;
-	  right: 0;
-  
-	  a {
-		color: #fff;
-		text-decoration: none;
-		font-size: 25px;
-	  }
-	}
-  
-  }
 
-  #menu-icon {
+	&.active {
+		transform: translateX(0px);
+	}
+
+	nav {
+		flex-direction: column;
+		display: flex;
+		gap: 10px;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+		right: 0;
+
+		a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 25px;
+		}
+	}
+}
+
+#menu-icon {
 	z-index: 10;
 	width: 23px;
 	display: flex;
@@ -355,7 +348,6 @@ header {
 			opacity: 0;
 
 			&-left {
-
 				opacity: 1;
 				display: block;
 				width: 100%;
@@ -366,7 +358,7 @@ header {
 
 			&-center {
 				width: 0%;
-				transition: 0.5s ease
+				transition: 0.5s ease;
 			}
 
 			&-right {
@@ -376,7 +368,6 @@ header {
 				transition: 0.2s ease;
 				top: 50%;
 				transform: translateX(0%) rotate(45deg);
-
 			}
 		}
 	}
@@ -391,7 +382,7 @@ header {
 			position: absolute;
 			transform: translateY(-50%);
 			top: 50%;
-			transition: 0.5s ease
+			transition: 0.5s ease;
 		}
 
 		&-left {
@@ -408,17 +399,13 @@ header {
 			transform: translateX(100%);
 			transition: 0.2s ease;
 		}
-
-
-
 	}
+}
 
-}  
-
- @keyframes movingCta {
+@keyframes movingCta {
 	0% {
 		bottom: 5%;
-		}
+	}
 
 	50% {
 		bottom: 4%;

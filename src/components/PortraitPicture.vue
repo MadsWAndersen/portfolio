@@ -1,9 +1,9 @@
 <template>
 	<div class="img">
 		<div class="img__container">
-			<img class="img-top" src="/public/img/MadsPicture.jpg">
-			<img class="img-mid" src="/public/img/MadsPicture.jpg">
-			<img class="img-bottom" src="/public/img/MadsPicture.jpg">
+			<img class="img-top" src="/img/MadsPicture.jpg">
+			<img class="img-mid" src="/img/MadsPicture.jpg">
+			<img class="img-bottom" src="/img/MadsPicture.jpg">
 		</div>
 	</div>
 </template>

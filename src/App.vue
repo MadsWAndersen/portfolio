@@ -103,7 +103,7 @@ onMounted(() => {
     <div class="container">
       <div class="container__introduction">
         <div class="container__introduction__wrapper">
-          <img class="container__img" src="/public/img/MadsPicture.jpg" alt="">
+          <img class="container__img" src="/img/MadsPicture.jpg" alt="">
           <h1 class="ml14">
             <span class="text-wrapper">
               <span class="letters">Welcome!</span>

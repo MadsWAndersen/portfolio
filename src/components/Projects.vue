@@ -1,5 +1,7 @@
 <template>
-  <h2>Projectz</h2>
+  <h2>Projectz
+
+  </h2>
   <div class="projects">
 
     <div v-for="(project, index) in projects" :key="index" class="project" @click="showModal(project)">
@@ -43,8 +45,8 @@ const projects = ref([
       'By the end of the project, we were proud to have delivered solution that met UCLs needs and had a potential to streamline their study counseling process.\n\n' +
       'If you wish to see the product you can do it <a href="https://we-lander.dk/Studievejledning/#/login">here</a>\n\n' +
       'The username is Mads and the password is 12345',
-    image: 'public/img/UCL.png',
-    imageGif: 'public/img/MC.gif'
+    image: '/img/UCL.png',
+    imageGif: '/img/MC.gif'
   },
   {
     title: 'Car service deal form',
@@ -53,8 +55,8 @@ const projects = ref([
       'The remaining parts of the page were developed using WordPress as the content management system and Divi as the page builder.\n\n' +
       'You can view the final product <a href="https://serviceaftale.driveclever.dk/">here</a>\n\n',
 
-    image: 'public/img/DC.png',
-    imageGif: 'public/img/DC.gif'
+    image: '/img/DC.png',
+    imageGif: '/img/DC.gif'
   },
 
   {
@@ -64,8 +66,8 @@ const projects = ref([
       'During this project i learned valuable information about WooCommerce as well as manipulating core files with JavaScript and JQuery to get it my way. This was a super fun product to work on.\n\n' +
       'Furthermore i customized the products using Advanced Custom Fields while of course aided by PHP. All styling was mananged using SCSS as a preprocesser\n\n' +
       'You can view the final product <a href="https://roll-o-matic.com/">here</a>\n\n',
-    image: 'public/img/ROM.png',
-    imageGif: 'public/img/ROM.gif'
+    image: '/img/ROM.png',
+    imageGif: '/img/ROM.gif'
   }
 ]);
 

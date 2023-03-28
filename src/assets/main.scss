@@ -134,6 +134,7 @@ header {
 	display: flex;
 	gap: 20px;
 	align-items: bottom;
+	margin-top: 50px;
 }
 
 p {
@@ -151,6 +152,7 @@ p {
 		height: 220px;
 		object-fit: cover;
 		margin-top: 100px;
+		
 	}
 	position: relative;
 	&.header {

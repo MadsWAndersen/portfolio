@@ -87,6 +87,7 @@ function onInputBlurM() {
   color: #fff;
   width: 100%;
   z-index: 0;
+ 
 
   fieldset {
     padding: 50px;
@@ -97,7 +98,13 @@ function onInputBlurM() {
     background: linear-gradient(90deg, rgba(255, 102, 0, 1) 0%, rgba(213, 141, 94, 1) 100%);
     @media (max-width: $breakpoint-sm) {
       padding: 20px;
+
       margin: $dmarginM;
+      margin-top: 100px;
+
+      h2 {
+        font-size: 1.5rem;
+      }
     }
 
     h2 {

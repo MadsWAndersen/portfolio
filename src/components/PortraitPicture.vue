@@ -32,7 +32,7 @@
 		transform-origin: 50% 50%;
 
 		&:hover {
-			transform: rotateY(15deg) rotateX(5deg);
+			transform: rotateY(50 deg) rotateX(-20deg);
 			cursor: pointer;
 		}
 

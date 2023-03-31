@@ -12,7 +12,7 @@
       <div class="modal-info">
         <h3 class="modal-project-title">{{ selectedProject.title }}</h3>
         <p class="modal-project-description" v-html="selectedProject.longdesc.replace(/\n/g, '<br>')"></p>
-        <a :href="selectedProject.link" target="_blank">{{ selectedProject.linkText }}</a>
+        <!-- <a :href="selectedProject.link" target="_blank">{{ selectedProject.linkText }}</a> -->
         <button @click="hideModal">Close</button>
       </div>
     </div>

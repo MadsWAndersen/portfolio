@@ -75,6 +75,12 @@ section {
 	margin: auto;
 	min-height: 100vh;
 	margin-bottom: 100px;
+
+	&#home {
+		@media (max-width: $breakpoint-md) {
+			margin-bottom: 0px;
+		}
+	}
 	&#projects {
 		scroll-margin-top: 100px;
 		min-height: 80vh;

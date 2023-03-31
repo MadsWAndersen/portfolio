@@ -8,16 +8,18 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
 
-    - name: 'Qodana Scan'
-      uses: JetBrains/qodana-action@main
-      env:
-QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
-
     - name: 🔨 Build Project
       run: |
         npm install
         npm run build
 
+
+    - name: 'Qodana Scan'
+      uses: JetBrains/qodana-action@main
+      env:
+      QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+
+      
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
